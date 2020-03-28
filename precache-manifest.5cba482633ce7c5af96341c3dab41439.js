@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dc6d14f32d444c03af9c1afb8b0423a6",
+    "revision": "3cf68f1ef774271adf55ff8008320457",
     "url": "cvspinelli09.github.io/classic-car/index.html"
   },
   {

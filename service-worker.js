@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "cvspinelli09.github.io/classic-car/precache-manifest.bf5e491e9ff91a15d5811b2dfdf778e7.js"
+  "cvspinelli09.github.io/classic-car/precache-manifest.5cba482633ce7c5af96341c3dab41439.js"
 );
 
 self.addEventListener('message', (event) => {
