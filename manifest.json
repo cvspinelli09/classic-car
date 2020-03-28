@@ -1,0 +1,25 @@
+{
+  "short_name": "Classics Price-Guide",
+  "name": "Classics Price-Guide by Cristian",
+  "icons": [
+    {
+      "src": "classic.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "classic.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "classic.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
