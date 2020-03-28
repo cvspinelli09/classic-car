@@ -9,7 +9,7 @@ import { ReactComponent as Logo } from '../../components/img/octane.svg';
 import "./header.styles.scss";
 
 const Header = ({ currentUser }) => (
-  <div className="header">
+  <div className="header-container">
     <Link className="logo-container" to="/">
       <Logo className="logo" />
     </Link>
@@ -20,12 +20,7 @@ const Header = ({ currentUser }) => (
         :
         <Link className='option' to='/signin'>Price Guide</Link>
       }
-      <Link className="option" to="/market">
-        Classics
-      </Link>
-      <Link className="option" to="/contact">
-        Contact
-      </Link>
+      
       {
         currentUser ?
         <div className='option' onClick={() => auth.signOut()}>SIGN OUT</div>

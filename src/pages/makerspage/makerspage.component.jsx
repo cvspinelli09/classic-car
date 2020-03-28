@@ -1,19 +1,23 @@
 import React from 'react';
-import { Route, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
  
 import './makerspage.styles.scss';
 
 import MakersOverview from '../../components/makers-overview/makers-overview.component';
-import MakersCardDisplay from '../../components/makers-card-display/makers-card-display.component';
 
+import CAR_DATA from '../../car.data';
 
-const MakersPage = ({ match }) => {
-    console.log(match);
+const collections = CAR_DATA;
+
+const MakersPage = props => {
+
+    const items = collections.filter(items => items.title === props.match.params.categoryId)
+  
     return (
-    <div className='makers-page'>
-        <Route exact path={`${match.path}`} component={MakersOverview} />  
-        <Route path={`${match.path}/:categoryId`} component={MakersCardDisplay} />      
-    </div>
-)};
+        <div className='makers-page'>
+            <MakersOverview items={items} />
+        </div>
+    )
+};
 
-export default withRouter(MakersPage);
+export default withRouter(MakersPage); 

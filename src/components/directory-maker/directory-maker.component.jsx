@@ -1,10 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
 import MakerItem from '../maker-item/maker-item.component';
 import SearchBox from '../search-box/search-box.component';
-
-import { setSearchField } from "../../redux/searchfield/searchfield.actions.js";
 
 import './directory-maker.styles.scss';
 import { INITIAL_MAKERS_DATA } from './directory.data';
@@ -25,6 +22,7 @@ class DirectoryMaker extends React.Component {
   }
 
   render() {
+
     const filteredMakers = this.state.makers.filter(maker => {
       return maker.title
         .toLowerCase()
@@ -38,8 +36,7 @@ class DirectoryMaker extends React.Component {
         <div 
           className="directory-maker-menu"
           style={{
-            overflowY: "scroll",
-            height: "480px"
+            overflowY: "scroll"
           }}
         >
           {filteredMakers.map(({ title, imgUrl, id, linkUrl }) => (
@@ -51,12 +48,4 @@ class DirectoryMaker extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  searchField: state.searchField
-});
-
-const mapDispatchToProps = dispatch => ({
-  onSearchChange: event => dispatch(setSearchField(event.target.value))
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(DirectoryMaker);
+export default DirectoryMaker;

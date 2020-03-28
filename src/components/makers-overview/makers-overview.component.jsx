@@ -1,21 +1,17 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 import './makers-overview.styles.scss';
 
 import MakersCardItem from '../../components/makers-card-item/makers-card-item.component';
 
-import CAR_DATA from '../../car.data';
 
-const collections = CAR_DATA;
-
-const MakersOverview = ({ match }) => {
-    console.log(match.params.categoryId)
+const MakersOverview = items => {
+    
     return (
     <div>
-        {collections.map(({ id, ...otherCollectionProps }) => (
-            <MakersCardItem key={id} {...otherCollectionProps} />
-        ))}
+        <MakersCardItem items={items}/>
     </div>
 )};
 
-export default MakersOverview;
+export default withRouter(MakersOverview);

@@ -1,44 +1,44 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 import './makers-card-item.styles.scss';
 
+import MakersCardItemDetailed from '../makers-card-item-detailed/makers-card-item-detailed.component';
 
-const MakersCardItem = ({ logo, title, makerText, items }) => (
+
+const MakersCardItem = ({ items }) => {
+    // console.log("MakersCardItem", items.items[0].cars);
+    return (
     <div  
         className='makers-card'
-        style={{
-            overflowY: "scroll",
-            height: "480px"
-        }}
+        // style={{
+        //     overflowY: "scroll",
+        //     height: "580px"
+        // }}
     >
-        <div className='header-title-container'>
-            <h2 className='title'>{`${title}`}</h2>
+        <div className='item-title-container'>
+            <h2 className='title'>{`${items.items[0].title}`}</h2>
         </div>
-        <div className='header-container1'>
+        <div className='card-header'>
             <div
-                className='image1'
+                className='logo-header'
                 style={{
-                    backgroundImage: `url(${logo})`
+                    backgroundImage: `url(${items.items[0].logo})`
                 }}
             />            
-            <span className='text'>{`${makerText}`}</span>
+            <span className='text'>{`${items.items[0].makerText}`}</span>
         </div>
         <div className='content-card-container'>
             <div>
                 <div className='subheader'>
                     <h3 className='subtitle'>models</h3>
                 </div>
-                <div className='models-window'>
-                    {items.map(item => (
-                        <div key={item.id} className='model-box-display'>
-                            <img alt='car models' src={`${item.imageUrl}`} className='display-image' />
-                            <h3 className='items-name'>{`${item.name}`}</h3>
-                        </div>
-                    ))}
+                <div>
+                    <MakersCardItemDetailed items={items} />
                 </div>
             </div>
         </div>
     </div>
-);
+)};
 
-export default MakersCardItem;
+export default withRouter(MakersCardItem);

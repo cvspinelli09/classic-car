@@ -54,6 +54,12 @@ export const INITIAL_MAKERS_DATA = [
     linkUrl: "/audi"
   },
   {
+    title: "austin",
+    imgUrl: require("../img/Logo/Austin.png"),
+    id: 101,
+    linkUrl: "/austin"
+  },
+  {
     title: "austin healey",
     imgUrl: require("../img/Logo/austin-healey.png"),
     id: 10,
@@ -102,16 +108,16 @@ export const INITIAL_MAKERS_DATA = [
     linkUrl: "/bristol"
   },
   {
-    title: "chevrolet",
-    imgUrl: require("../img/Logo/chevrolet.png"),
-    id: 18,
-    linkUrl: "/chevrolet"
-  },
-  {
     title: "caterham",
     imgUrl: require("../img/Logo/caterham.png"),
-    id: 19,
+    id: 18,
     linkUrl: "/caterham"
+  },
+  {
+    title: "chevrolet",
+    imgUrl: require("../img/Logo/chevrolet.png"),
+    id: 19,
+    linkUrl: "/chevrolet"
   },
   {
     title: "chrysler",
