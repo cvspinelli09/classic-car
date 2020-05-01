@@ -5,7 +5,7 @@ import Logo from "../img/octane.svg";
 import './makers-card-item-detailed.styles.scss';
 
 const MakersCardItemDetailed = ({ items }) => {
-    
+    console.log(items.cars);
     return (
         <div className='card'>
             {items.items[0].cars.map(items => (  
